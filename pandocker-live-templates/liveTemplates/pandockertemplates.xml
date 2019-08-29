@@ -124,4 +124,18 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name=".toc" value="\toc&#10;$END$" description="TableOfContents \toc  (LaTeX/DOCX only)"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".newpage" value="\newpage&#10;$END$" description="Pagebreak \newpage (LaTeX/DOCX only)"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
 </templateSet>
