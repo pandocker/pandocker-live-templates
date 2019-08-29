@@ -1,0 +1,62 @@
+<templateSet group="Pandocker">
+    <template name=".pdiv" value="::: {$CLASS$}&#10;$END$&#10;:::&#10;" description="Pandoc's div statement ::: {$CLASS$} :::" toReformat="false" toShortenFQNames="true">
+        <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".rmnote" value="::: rmnote&#10;$END&#10;:::&#10;" description="Removable note ::: rmnote :::" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".lscape" value="::: LANDSCAPE&#10;$END$&#10;:::&#10;" description="Landscape (TeX only) ::: LANDSCAPE :::" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".dtable" value="::: {.table $ATTR$}&#10;$END$&#10;:::&#10;" description="Table attribute div ::: {.table} :::" toReformat="false" toShortenFQNames="true">
+        <variable name="ATTR" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".csv2table" value="[$LABEL$]($ADDRESS$){.table $ATTR$}&#10;&#10;$END$" description="CSV to Table [](){.table}" toReformat="false" toShortenFQNames="true">
+        <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="ADDRESS" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="ATTR" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".include" value="# #include &quot;$FILE$&quot;&#10;$END$" description="# #include &quot;&quot;" toReformat="false" toShortenFQNames="true">
+        <variable name="FILE" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".wavedrom" value="[$LABEL$]($ADDRESS$){.wavedrom}&#10;&#10;$END$" description="Wavedrom [](){.wavedrom}" toReformat="false" toShortenFQNames="true">
+        <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="ADDRESS" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".ohm" value="&amp;Omega;$END$" description="&amp;Omega;" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".micro" value="&amp;mu;$END$" description="&amp;mu;" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+    <template name=".listingtable" value="[$LABEL$]($ADDRESS$){.listingtable}&#10;&#10;$END$" description="ListingTable [](){.listingtable}" toReformat="false" toShortenFQNames="true">
+        <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="ADDRESS" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+</templateSet>
