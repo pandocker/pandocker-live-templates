@@ -1,4 +1,3 @@
-*.zip
 out/
 .idea/
 */.DS_Store
