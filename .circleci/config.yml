@@ -2,12 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: k4zuki/pandocker-base
+      - image: ubuntu
     steps:
       - checkout
       - run:
-          name: install Make and zip
-          command: apt -y install make zip
+          name: install pandoc, Make and zip
+          command: apt -y install pandoc make zip
       - run:
           name: Make
           command: make
