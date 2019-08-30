@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install Make
-          command: apt install make
+          name: install Make and zip
+          command: apt install make zip
       - run:
           name: Make
           command: make
