@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: install Make and zip
-          command: apt install make zip
+          command: apt -y install make zip
       - run:
           name: Make
           command: make
