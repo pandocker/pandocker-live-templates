@@ -14,12 +14,12 @@ jobs:
           name: Make
           command: |
             SHORT_HASH=${CIRCLE_SHA1:0:7}
-            mkdir dist
+            mkdir /tmp/dist
             make VERSION=$SHORT_HASH
       - store_artifacts:
           command: |
             SHORT_HASH=${CIRCLE_SHA1:0:7}
-          path: ./dist/
+          path: /tmp/dist/
 notify:
   webhooks:
     - url: $PANDOCKER_HOOK_URL
