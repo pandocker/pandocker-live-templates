@@ -1,4 +1,4 @@
 all:
-	pandoc README.md --template=template.xml -t html -o pandocker-live-templates/META-INF/output.xml -M version=$(VERSION)
+	pandoc README.md --template=template.xml -t html -o pandocker-live-templates/META-INF/plugin.xml -M version=$(VERSION)
 	zip -r /tmp/dist/pandocker-live-templates-$(VERSION).zip pandocker-live-templates/
-#	zip -d pandocker-live-templates.zip "*/.DS_Store"
+	head pandocker-live-templates/META-INF/plugin.xml
