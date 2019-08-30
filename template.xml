@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.pandocker</id>
+    <name>Live Templates for Pandoc's markdown</name>
+    <version>$version$</version>
+    <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
+
+    <description><![CDATA[
+Live Templates for Pandoc's markdown and extra features
+]]></description>
+
+    <change-notes><![CDATA[
+$body$
+]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplatesProvider implementation="com.pandocker.templates.PandockerLiveTemplateProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
