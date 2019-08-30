@@ -7,7 +7,9 @@ jobs:
       - checkout
       - run:
           name: install pandoc, Make and zip
-          command: apt -y install pandoc make zip
+          command: |
+            apt update
+            apt -y install pandoc make zip
       - run:
           name: Make
           command: make
