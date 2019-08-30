@@ -1,33 +1,66 @@
 <idea-plugin>
-  <id>com.pandocker</id>
-  <name>Live Templates for Pandoc's markdown</name>
-  <version>0.1</version>
-  <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
+    <id>com.pandocker</id>
+    <name>Live Templates for Pandoc's markdown</name>
+    <version>0.1</version>
+    <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
 Live Templates for Pandoc's markdown and extra features
 ]]></description>
 
-  <change-notes><![CDATA[
-version 0.1: initial development version
+    <change-notes><![CDATA[
+<h2 id="templates">Templates</h2>
+<h3 id="shortcuts-for-pandocs-syntax">Shortcuts for <strong>Pandoc</strong>’s syntax</h3>
+<ul>
+<li><code>.pdiv</code></li>
+<li><code>.micro</code></li>
+<li><code>.ohm</code></li>
+</ul>
+<h3 id="shortcuts-for-pandoc-crossref-filter-usage">Shortcuts for <strong>pandoc-crossref</strong> filter usage</h3>
+<ul>
+<li><code>l.fig</code></li>
+<li><code>l.lst</code></li>
+<li><code>l.sec</code></li>
+<li><code>l.tbl</code></li>
+<li><code>r.fig</code></li>
+<li><code>r.lst</code></li>
+<li><code>r.sec</code></li>
+<li><code>r.tbl</code></li>
+</ul>
+<h3 id="shorcuts-for-pandocker-lua-filters-filter-usage">Shorcuts for <strong>pandocker-lua-filters</strong> filter usage</h3>
+<ul>
+<li><code>.csv2table</code></li>
+<li><code>.include</code></li>
+<li><code>.listingtable</code></li>
+<li><code>.wavedrom</code></li>
+<li><code>.toc</code></li>
+<li><code>d.lscape</code></li>
+<li><code>d.rmnote</code></li>
+<li><code>d.table</code></li>
+</ul>
+<h2 id="versions">Versions</h2>
+<h3 id="version-0.1">Version 0.1</h3>
+<ul>
+<li>First published version</li>
+</ul>
 ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
 
-  <extensions defaultExtensionNs="com.intellij">
-    <defaultLiveTemplatesProvider implementation="com.pandocker.templates.PandockerLiveTemplateProvider"/>
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplatesProvider implementation="com.pandocker.templates.PandockerLiveTemplateProvider"/>
+    </extensions>
 
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
 
 </idea-plugin>
