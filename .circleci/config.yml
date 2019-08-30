@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: k4zuki/pandocker-base
+    steps:
+      - checkout
+      - run:
+          name: Make
+          command: make
+notify:
+  webhooks:
+    - url: $PANDOCKER_HOOK_URL
