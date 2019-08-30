@@ -14,11 +14,12 @@ jobs:
           name: Make
           command: |
             SHORT_HASH=${CIRCLE_SHA1:0:7}
+            mkdir dist
             make VERSION=$SHORT_HASH
       - store_artifacts:
           command: |
             SHORT_HASH=${CIRCLE_SHA1:0:7}
-          path: ./pandocker-live-templates-$SHORT_HASH.zip
+          path: ./dist/
 notify:
   webhooks:
     - url: $PANDOCKER_HOOK_URL
