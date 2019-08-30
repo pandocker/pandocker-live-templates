@@ -12,7 +12,9 @@ jobs:
             apt -y install pandoc make zip
       - run:
           name: Make
-          command: make
+          command: |
+            SHORT_HASH=${CIRCLE_SHA1:0:7}
+            make VERSION=$SHORT_HASH
       - store_artifacts:
           path: ./pandocker-live-templates.zip
 notify:
