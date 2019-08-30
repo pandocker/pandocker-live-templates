@@ -1,4 +1,4 @@
-<templateSet group="Pandocker">
+<templateSet group="Pandoc">
     <template name=".pdiv" value="::: {$CLASS$}&#10;$END$&#10;:::&#10;"
               description="Pandoc's div statement ::: {$CLASS$} :::" toReformat="false" toShortenFQNames="true">
         <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true"/>
@@ -6,6 +6,18 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name=".ohm" value="&amp;Omega;$END$" description="&amp;Omega;" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".micro" value="&amp;micro;$END$" description="&amp;micro;" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+
     <template name="d.rmnote" value="::: rmnote&#10;$END&#10;:::&#10;" description="Removable note ::: rmnote :::"
               toReformat="false" toShortenFQNames="true">
         <context>
@@ -41,25 +53,6 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
-    <template name=".wavedrom" value="[$LABEL$]($ADDRESS$){.wavedrom}&#10;&#10;$END$"
-              description="Wavedrom [](){.wavedrom}" toReformat="false" toShortenFQNames="true">
-        <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true"/>
-        <variable name="ADDRESS" expression="" defaultValue="" alwaysStopAt="true"/>
-        <context>
-            <option name="MARKDOWN" value="true"/>
-        </context>
-    </template>
-    <template name=".ohm" value="&amp;Omega;$END$" description="&amp;Omega;" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="MARKDOWN" value="true"/>
-        </context>
-    </template>
-    <template name=".micro" value="&amp;micro;$END$" description="&amp;micro;" toReformat="false"
-              toShortenFQNames="true">
-        <context>
-            <option name="MARKDOWN" value="true"/>
-        </context>
-    </template>
     <template name=".listingtable" value="[$LABEL$]($ADDRESS$){.listingtable}&#10;&#10;$END$"
               description="ListingTable [](){.listingtable}" toReformat="false" toShortenFQNames="true">
         <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true"/>
@@ -68,6 +61,29 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name=".newpage" value="\newpage&#10;$END$" description="Pagebreak \newpage (LaTeX/DOCX only)"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".toc" value="\toc&#10;$END$" description="TableOfContents \toc  (LaTeX/DOCX only)"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".wavedrom" value="[$LABEL$]($ADDRESS$){.wavedrom}&#10;&#10;$END$"
+              description="Wavedrom [](){.wavedrom}" toReformat="false" toShortenFQNames="true">
+        <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="ADDRESS" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+
     <template name="r.fig" value="[@fig:$REFERENCE$]$END$" description="pandoc-crossref reference figure [@fig:]"
               toReformat="false" toShortenFQNames="true">
         <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
@@ -96,7 +112,7 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
-    <template name="r.tbl" value="[@tbl:$REFERENCE$]$END$" description="pandoc-crossref reference table [@tbl:]"
+    <template name="l.lst" value="#lst:$REFERENCE$ $END$" description="pandoc-crossref listing anchor #lst:"
               toReformat="false" toShortenFQNames="true">
         <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
@@ -110,28 +126,14 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name="r.tbl" value="[@tbl:$REFERENCE$]$END$" description="pandoc-crossref reference table [@tbl:]"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
     <template name="l.tbl" value="#tbl:$REFERENCE$ $END$" description="pandoc-crossref table anchor #tbl:"
-              toReformat="false" toShortenFQNames="true">
-        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
-        <context>
-            <option name="MARKDOWN" value="true"/>
-        </context>
-    </template>
-    <template name="l.lst" value="#lst:$REFERENCE$ $END$" description="pandoc-crossref listing anchor #lst:"
-              toReformat="false" toShortenFQNames="true">
-        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
-        <context>
-            <option name="MARKDOWN" value="true"/>
-        </context>
-    </template>
-    <template name=".toc" value="\toc&#10;$END$" description="TableOfContents \toc  (LaTeX/DOCX only)"
-              toReformat="false" toShortenFQNames="true">
-        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
-        <context>
-            <option name="MARKDOWN" value="true"/>
-        </context>
-    </template>
-    <template name=".newpage" value="\newpage&#10;$END$" description="Pagebreak \newpage (LaTeX/DOCX only)"
               toReformat="false" toShortenFQNames="true">
         <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
