@@ -11,6 +11,8 @@ jobs:
       - run:
           name: Make
           command: make
+      - store_artifacts:
+          path: ./pandocker-live-templates.zip
 notify:
   webhooks:
     - url: $PANDOCKER_HOOK_URL
