@@ -9,7 +9,7 @@ jobs:
           name: install pandoc, Make and zip
           command: |
             apt update
-            apt -y install pandoc make zip
+            apt -y install pandoc make zip ca-certificates
       - run:
           name: Make
           command: |
