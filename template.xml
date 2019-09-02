@@ -5,11 +5,14 @@
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[
-Live Templates for Pandoc's markdown and extra features
+<h1>Live Templates for Pandoc's markdown and extra features<h1>
+$body$
 ]]></description>
 
     <change-notes><![CDATA[
-$body$
+$for(include-after)$
+$include-after$
+$endfor$
 ]]>
     </change-notes>
 
