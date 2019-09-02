@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.pandocker</id>
     <name>Live Templates for Pandoc's markdown</name>
-    <version>0.1</version>
+    <version>0.2</version>
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[

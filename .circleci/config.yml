@@ -6,6 +6,19 @@ jobs:
     steps:
       - checkout
       - run:
+          name: env variables
+          command: |
+            # https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-shell-command
+            echo "export DATE=`date +%Y-%m%b-%d`" >> $BASH_ENV
+            echo "export SHORT_HASH=${CIRCLE_SHA1:0:7}" >> $BASH_ENV
+            source $BASH_ENV
+            echo "export BUILD=build-$CIRCLE_BUILD_NUM-$CIRCLE_BRANCH-$DATE-$SHORT_HASH" >> $BASH_ENV
+            source $BASH_ENV
+            echo `git describe --tags`
+            echo "SHORT_HASH=" $SHORT_HASH
+            echo "DATE=" $DATE
+            echo "BUILD=" $BUILD
+      - run:
           name: install pandoc, Make and zip
           command: |
             apt update
@@ -13,12 +26,10 @@ jobs:
       - run:
           name: Make
           command: |
-            SHORT_HASH=${CIRCLE_SHA1:0:7}
             mkdir dist
             make VERSION=$SHORT_HASH
       - store_artifacts:
           command: |
-            SHORT_HASH=${CIRCLE_SHA1:0:7}
           path: dist/
 notify:
   webhooks:
