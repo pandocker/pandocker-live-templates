@@ -3,15 +3,22 @@
 ### Shortcuts for **Pandoc**'s syntax
 
 - `.pdiv`
+```markdown
+::: {$CLASS$}
+$END$
+:::
+```
 - `.micro`
 - `.ohm`
 
 ### Shortcuts for **pandoc-crossref** filter usage
 
+- `l.eq`
 - `l.fig`
 - `l.lst`
 - `l.sec`
 - `l.tbl`
+- `r.eq`
 - `r.fig`
 - `r.lst`
 - `r.sec`
@@ -27,8 +34,3 @@
 - `d.lscape`
 - `d.rmnote`
 - `d.table`
-
-## Versions
-### Version 0.1
-
-- First published version
