@@ -140,4 +140,19 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name="r.eq" value="[@eq:$REFERENCE$]$END$" description="pandoc-crossref reference equation [@eq:]"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name="l.eq" value="#eq:$REFERENCE$ $END$" description="pandoc-crossref equation anchor #eq:"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+
 </templateSet>
