@@ -1,27 +1,31 @@
 <idea-plugin>
     <id>com.pandocker</id>
     <name>Live Templates for Pandoc's markdown</name>
-    <version>0.2</version>
+    <version>0.3</version>
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[
-Live Templates for Pandoc's markdown and extra features
-]]></description>
-
-    <change-notes><![CDATA[
+<h1>Live Templates for Pandoc's markdown and extra features<h1>
 <h2 id="templates">Templates</h2>
 <h3 id="shortcuts-for-pandocs-syntax">Shortcuts for <strong>Pandoc</strong>’s syntax</h3>
 <ul>
 <li><code>.pdiv</code></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb1-1" title="1">::: {$CLASS$}</a>
+<a class="sourceLine" id="cb1-2" title="2">$END$</a>
+<a class="sourceLine" id="cb1-3" title="3">:::</a></code></pre></div>
+<ul>
 <li><code>.micro</code></li>
 <li><code>.ohm</code></li>
 </ul>
 <h3 id="shortcuts-for-pandoc-crossref-filter-usage">Shortcuts for <strong>pandoc-crossref</strong> filter usage</h3>
 <ul>
+<li><code>l.eq</code></li>
 <li><code>l.fig</code></li>
 <li><code>l.lst</code></li>
 <li><code>l.sec</code></li>
 <li><code>l.tbl</code></li>
+<li><code>r.eq</code></li>
 <li><code>r.fig</code></li>
 <li><code>r.lst</code></li>
 <li><code>r.sec</code></li>
@@ -38,10 +42,20 @@ Live Templates for Pandoc's markdown and extra features
 <li><code>d.rmnote</code></li>
 <li><code>d.table</code></li>
 </ul>
-<h2 id="versions">Versions</h2>
+]]></description>
+
+    <change-notes><![CDATA[
+<h3 id="version-0.3">Version 0.3</h3>
+<ul>
+<li>add <code>l.eq</code> and <code>r.eq</code> shortcuts</li>
+</ul>
+<h3 id="version-0.2">Version 0.2</h3>
+<ul>
+<li>Upload to Stable line</li>
+</ul>
 <h3 id="version-0.1">Version 0.1</h3>
 <ul>
-<li>First published version</li>
+<li>First published alpha version</li>
 </ul>
 ]]>
     </change-notes>
