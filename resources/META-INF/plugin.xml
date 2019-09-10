@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.pandocker</id>
     <name>Live Templates for Pandoc's markdown</name>
-    <version>0.3</version>
+    <version>0.3-2-g6dc7958</version>
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[
@@ -67,11 +67,12 @@
          on how to target different products -->
     <!-- uncomment to enable plugin in all products
     -->
-  <depends>com.intellij.modules.lang</depends>
-  <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplatesProvider implementation="com.pandocker.templates.PandockerLiveTemplateProvider"/>
+        <toolWindow id="Hello World" anchor="bottom" factoryClass="com.pandocker.templates.PandockerWindow"/>
     </extensions>
 
     <actions>
