@@ -1,0 +1,56 @@
+<toolSet name="PandockerPlugin">
+    <tool name="PDF" description="pandocker pdf" showInMainMenu="false" showInEditor="false" showInProject="false"
+          showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true"
+          showConsoleOnStdErr="true" synchronizeAfterRun="true">
+        <exec>
+            <option name="COMMAND" value="docker"/>
+            <option name="PARAMETERS" value="run -v $ContentRoot$:/workdir k4zuki/pandocker-alpine make pdf"/>
+            <option name="WORKING_DIRECTORY" value="$ContentRoot$"/>
+        </exec>
+    </tool>
+    <tool name="HTML" description="pandocker html" showInMainMenu="false" showInEditor="false" showInProject="false"
+          showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true"
+          showConsoleOnStdErr="true" synchronizeAfterRun="true">
+        <exec>
+            <option name="COMMAND" value="docker"/>
+            <option name="PARAMETERS" value="run -v $ContentRoot$:/workdir k4zuki/pandocker-alpine make html"/>
+            <option name="WORKING_DIRECTORY" value="$ContentRoot$"/>
+        </exec>
+    </tool>
+    <tool name="DOCX" description="pandocker docx" showInMainMenu="false" showInEditor="false" showInProject="false"
+          showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true"
+          showConsoleOnStdErr="true" synchronizeAfterRun="true">
+        <exec>
+            <option name="COMMAND" value="docker"/>
+            <option name="PARAMETERS" value="run -v $ContentRoot$:/workdir k4zuki/pandocker-alpine make docx"/>
+            <option name="WORKING_DIRECTORY" value="$ContentRoot$"/>
+        </exec>
+    </tool>
+    <tool name="Clean" description="pandocker clean" showInMainMenu="false" showInEditor="false" showInProject="false"
+          showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true"
+          showConsoleOnStdErr="true" synchronizeAfterRun="true">
+        <exec>
+            <option name="COMMAND" value="docker "/>
+            <option name="PARAMETERS" value="run -v $ContentRoot$:/workdir k4zuki/pandocker-alpine make clean"/>
+            <option name="WORKING_DIRECTORY" value="$ContentRoot$"/>
+        </exec>
+    </tool>
+    <tool name="Console" description="pandocker docx" showInMainMenu="false" showInEditor="false" showInProject="false"
+          showInSearchPopup="false" disabled="true" useConsole="true" showConsoleOnStdOut="true"
+          showConsoleOnStdErr="true" synchronizeAfterRun="true">
+        <exec>
+            <option name="COMMAND" value="docker"/>
+            <option name="PARAMETERS" value="run -i -v $ContentRoot$:/workdir k4zuki/pandocker"/>
+            <option name="WORKING_DIRECTORY" value="$ContentRoot$"/>
+        </exec>
+    </tool>
+    <tool name="INIT" description="pandocker clean" showInMainMenu="false" showInEditor="false" showInProject="false"
+          showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true"
+          showConsoleOnStdErr="true" synchronizeAfterRun="true">
+        <exec>
+            <option name="COMMAND" value="docker "/>
+            <option name="PARAMETERS" value="run -v $ContentRoot$:/workdir k4zuki/pandocker-alpine init"/>
+            <option name="WORKING_DIRECTORY" value="$ContentRoot$"/>
+        </exec>
+    </tool>
+</toolSet>
