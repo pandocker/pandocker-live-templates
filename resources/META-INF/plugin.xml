@@ -71,15 +71,14 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolsProvider id="PandockerToolProvider" order="first"
-                       implementation="com.pandocker.templates.PandockerToolProvider"/>
         <defaultLiveTemplatesProvider id="PandockerLiveTemplateProvider"
                                       implementation="com.pandocker.templates.PandockerLiveTemplateProvider"/>
-        <!--        <toolWindow id="Hello World" anchor="bottom" factoryClass="com.pandocker.templates.PandockerWindow"/>-->
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
+        <group id="com.pandocker.templates.PandockerToolProvider" class="com.pandocker.templates.PandockerToolProvider"
+               text="PandockerPlugin"/>
     </actions>
 
 </idea-plugin>
