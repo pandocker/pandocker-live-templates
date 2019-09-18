@@ -17,6 +17,30 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name=".deg" value="&amp;deg;$END$" description="&amp;deg; (°)" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".degc" value="&amp;deg;C$END$" description="&amp;deg;C (°C)" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".-&gt;" value="&amp;rarr;$END$" description="&amp;rarr; (→)" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".-&lt;" value="&amp;larr;$END$" description="&amp;larr; (←)" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
 
     <template name="d.rmnote" value="::: rmnote&#10;$END&#10;:::&#10;" description="Removable note ::: rmnote :::"
               toReformat="false" toShortenFQNames="true">

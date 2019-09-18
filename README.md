@@ -8,8 +8,12 @@
 $END$
 :::
 ```
-- `.micro`
-- `.ohm`
+- `.micro` &rarr; `&micro; (µ)`
+- `.ohm` &rarr; `&Omega; (Ω)`
+- `.deg` &rarr; `&deg; (°)`
+- `.degc` &rarr; `&deg;C (°C)`
+- `.->` &rarr; `&rarr; (→)`
+- `.-<` &larr; `&larr; (←)` 
 
 ### Shortcuts for **pandoc-crossref** filter usage
 

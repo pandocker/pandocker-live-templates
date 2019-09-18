@@ -1,3 +1,7 @@
+### Version 0.4
+
+- add `.->`, `.-<`, `.deg` and `.degc` shortcuts
+
 ### Version 0.3
 
 - add `l.eq` and `r.eq` shortcuts
