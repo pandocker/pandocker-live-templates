@@ -42,7 +42,7 @@
         </context>
     </template>
 
-    <template name="d.rmnote" value="::: rmnote&#10;$END&#10;:::&#10;" description="Removable note ::: rmnote :::"
+    <template name="d.rmnote" value="::: rmnote&#10;$END$&#10;:::&#10;" description="Removable note ::: rmnote :::"
               toReformat="false" toShortenFQNames="true">
         <context>
             <option name="MARKDOWN" value="true"/>
