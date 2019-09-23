@@ -1,6 +1,14 @@
 <templateSet group="Pandoc">
+    <!-- Shortcuts for Pandoc's Markdown syntax -->
     <template name=".pdiv" value="::: {$CLASS$}&#10;$END$&#10;:::&#10;"
               description="Pandoc's div statement ::: {$CLASS$} :::" toReformat="false" toShortenFQNames="true">
+        <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".pspan" value="[$CONTENT$]{$CLASS$} $END$"
+              description="Pandoc's span statement []{$CLASS$}" toReformat="false" toShortenFQNames="true">
         <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="MARKDOWN" value="true"/>
@@ -42,6 +50,7 @@
         </context>
     </template>
 
+    <!-- Shortcuts for pandocker-lua-filters syntax -->
     <template name="d.rmnote" value="::: rmnote&#10;$END$&#10;:::&#10;" description="Removable note ::: rmnote :::"
               toReformat="false" toShortenFQNames="true">
         <context>
@@ -108,6 +117,15 @@
         </context>
     </template>
 
+    <!-- Shortcuts for pandoc-crossref's syntax -->
+    <template name=".fdiv" value="::: {#fig:$REFERENCE$}&#10;$END$&#10;:::&#10;"
+              description="Pandoc's div statement for figure block ::: {#fig:} :::" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
     <template name="r.fig" value="[@fig:$REFERENCE$]$END$" description="pandoc-crossref reference figure [@fig:]"
               toReformat="false" toShortenFQNames="true">
         <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>

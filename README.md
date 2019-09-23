@@ -8,6 +8,7 @@
 
 :::
 ```
+- `.pspan` &rarr; `[]{}`
 - `.micro` &rarr; `&micro; (µ)`
 - `.ohm` &rarr; `&Omega; (Ω)`
 - `.deg` &rarr; `&deg; (°)`
@@ -16,6 +17,16 @@
 - `.-<` &rarr; `&larr; (←)` 
 
 ### Shortcuts for [***pandoc-crossref***](https://lierdakil.github.io/pandoc-crossref/#references) filter usage
+
+#### subfigures
+
+- <https://lierdakil.github.io/pandoc-crossref/#subfigures>
+- `.fdiv` &rarr;
+```markdown 
+::: {#fig:}
+
+:::
+```
 
 #### Labels
 - `l.eq` &rarr; `#eq:` 

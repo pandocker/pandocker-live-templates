@@ -1,3 +1,7 @@
+### Version 0.5
+
+- add `.pspan` shortcut
+
 ### Version 0.4
 
 - add `.->`, `.-<`, `.deg` and `.degc` shortcuts
