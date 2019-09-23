@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.pandocker</id>
     <name>Live Templates for Pandoc's markdown</name>
-    <version>0.3-2-g6dc7958</version>
+    <version>0.4.3-2-ge5cb6eb</version>
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[
@@ -9,42 +9,114 @@
 <h2 id="templates">Templates</h2>
 <h3 id="shortcuts-for-pandocs-syntax">Shortcuts for <strong>Pandoc</strong>’s syntax</h3>
 <ul>
-<li><code>.pdiv</code></li>
+<li><code>.pdiv</code> →</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb1-1" title="1">::: {$CLASS$}</a>
-<a class="sourceLine" id="cb1-2" title="2">$END$</a>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb1-1" title="1">::: {}</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3">:::</a></code></pre></div>
 <ul>
-<li><code>.micro</code></li>
-<li><code>.ohm</code></li>
+<li><code>.pspan</code> → <code>[]{}</code></li>
+<li><code>.micro</code> → <code>&amp;micro; (µ)</code></li>
+<li><code>.ohm</code> → <code>&amp;Omega; (Ω)</code></li>
+<li><code>.deg</code> → <code>&amp;deg; (°)</code></li>
+<li><code>.degc</code> → <code>&amp;deg;C (°C)</code></li>
+<li><code>.-&gt;</code> → <code>&amp;rarr; (→)</code></li>
+<li><code>.-&lt;</code> → <code>&amp;larr; (←)</code></li>
 </ul>
-<h3 id="shortcuts-for-pandoc-crossref-filter-usage">Shortcuts for <strong>pandoc-crossref</strong> filter usage</h3>
+<h3 id="shortcuts-for-pandoc-crossref-filter-usage">Shortcuts for <a href="https://lierdakil.github.io/pandoc-crossref/#references"><strong><em>pandoc-crossref</em></strong></a> filter usage</h3>
+<h4 id="subfigures">subfigures</h4>
 <ul>
-<li><code>l.eq</code></li>
-<li><code>l.fig</code></li>
-<li><code>l.lst</code></li>
-<li><code>l.sec</code></li>
-<li><code>l.tbl</code></li>
-<li><code>r.eq</code></li>
-<li><code>r.fig</code></li>
-<li><code>r.lst</code></li>
-<li><code>r.sec</code></li>
-<li><code>r.tbl</code></li>
+<li><a href="https://lierdakil.github.io/pandoc-crossref/#subfigures" class="uri">https://lierdakil.github.io/pandoc-crossref/#subfigures</a></li>
+<li><code>.fdiv</code> →</li>
 </ul>
-<h3 id="shorcuts-for-pandocker-lua-filters-filter-usage">Shorcuts for <strong>pandocker-lua-filters</strong> filter usage</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" title="1">::: {#fig:}</a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3">:::</a></code></pre></div>
+<h4 id="labels">Labels</h4>
 <ul>
-<li><code>.csv2table</code></li>
-<li><code>.include</code></li>
-<li><code>.listingtable</code></li>
-<li><code>.wavedrom</code></li>
-<li><code>.toc</code></li>
-<li><code>d.lscape</code></li>
-<li><code>d.rmnote</code></li>
-<li><code>d.table</code></li>
+<li><code>l.eq</code> → <code>#eq:</code>
+<ul>
+<li><a href="https://lierdakil.github.io/pandoc-crossref/#equation-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#equation-labels</a></li>
+</ul></li>
+<li><code>l.fig</code> → <code>#fig:</code>
+<ul>
+<li><a href="https://lierdakil.github.io/pandoc-crossref/#image-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#image-labels</a></li>
+</ul></li>
+<li><code>l.lst</code> → <code>#lst:</code>
+<ul>
+<li><a href="https://lierdakil.github.io/pandoc-crossref/#code-block-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#code-block-labels</a></li>
+</ul></li>
+<li><code>l.sec</code> → <code>#sec:</code>
+<ul>
+<li><a href="https://lierdakil.github.io/pandoc-crossref/#section-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#section-labels</a></li>
+</ul></li>
+<li><code>l.tbl</code> → <code>#tbl:</code>
+<ul>
+<li><a href="https://lierdakil.github.io/pandoc-crossref/#table-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#table-labels</a></li>
+</ul></li>
 </ul>
+<h4 id="references">References</h4>
+<p>Visit <a href="https://lierdakil.github.io/pandoc-crossref/#references" class="uri">https://lierdakil.github.io/pandoc-crossref/#references</a> for more details</p>
+<ul>
+<li><code>r.eq</code> → <code>[@eq:]</code></li>
+<li><code>r.fig</code> → <code>[@fig:]</code></li>
+<li><code>r.lst</code> → <code>[@lst:]</code></li>
+<li><code>r.sec</code> → <code>[@sec:]</code></li>
+<li><code>r.tbl</code> → <code>[@tbl:]</code></li>
+</ul>
+<h3 id="shorcuts-for-pandocker-lua-filters-filter-usage">Shorcuts for <a href="https://github.com/pandocker/pandocker-lua-filters"><strong><em>pandocker-lua-filters</em></strong></a> filter usage</h3>
+<ul>
+<li><code>.csv2table</code> → <code>[](){.table }</code>
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#convert-csv-into-table" class="uri">https://github.com/pandocker/pandocker-lua-filters#convert-csv-into-table</a></li>
+</ul></li>
+<li><code>.include</code> → <code># #include ""</code>
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#concatenate-text-files" class="uri">https://github.com/pandocker/pandocker-lua-filters#concatenate-text-files</a></li>
+</ul></li>
+<li><code>.listingtable</code> → <code>[](){.listingtable}</code>
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#text-file-listing" class="uri">https://github.com/pandocker/pandocker-lua-filters#text-file-listing</a></li>
+</ul></li>
+<li><code>.wavedrom</code> → <code>[](){.wavedrom}</code>
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#wavedrom--bit-field" class="uri">https://github.com/pandocker/pandocker-lua-filters#wavedrom--bit-field</a></li>
+</ul></li>
+<li><code>.toc</code> → <code>\toc</code>
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak" class="uri">https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak</a></li>
+</ul></li>
+<li><code>d.lscape</code> →
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#landscape-pages" class="uri">https://github.com/pandocker/pandocker-lua-filters#landscape-pages</a> ```markdown ::: LANDSCAPE</li>
+</ul></li>
+</ul>
+<p>::: ```</p>
+<ul>
+<li><code>d.rmnote</code> →
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#removable-note-block" class="uri">https://github.com/pandocker/pandocker-lua-filters#removable-note-block</a> ```markdown ::: rmnote</li>
+</ul></li>
+</ul>
+<p>::: ```</p>
+<ul>
+<li><code>d.table</code> →
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table" class="uri">https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table</a> ```markdown ::: {.table }</li>
+</ul></li>
+</ul>
+<p>::: ```</p>
 ]]></description>
 
     <change-notes><![CDATA[
+<h3 id="version-0.5">Version 0.5</h3>
+<ul>
+<li>add <code>.pspan</code> shortcut</li>
+</ul>
+<h3 id="version-0.4">Version 0.4</h3>
+<ul>
+<li>add <code>.-&gt;</code>, <code>.-&lt;</code>, <code>.deg</code> and <code>.degc</code> shortcuts</li>
+</ul>
 <h3 id="version-0.3">Version 0.3</h3>
 <ul>
 <li>add <code>l.eq</code> and <code>r.eq</code> shortcuts</li>
@@ -77,8 +149,6 @@
 
     <actions>
         <!-- Add your actions here -->
-        <group id="com.pandocker.templates.PandockerToolProvider" class="com.pandocker.templates.PandockerToolProvider"
-               text="PandockerPlugin"/>
     </actions>
 
 </idea-plugin>
