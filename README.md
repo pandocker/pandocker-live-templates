@@ -14,7 +14,9 @@
 - `.deg` &rarr; `&deg; (°)`
 - `.degc` &rarr; `&deg;C (°C)`
 - `.->` &rarr; `&rarr; (→)`
+- `.rarr` &rarr; `&rarr; (→)`
 - `.-<` &rarr; `&larr; (←)` 
+- `.larr` &rarr; `&larr; (←)` 
 
 ### Shortcuts for [***pandoc-crossref***](https://lierdakil.github.io/pandoc-crossref/#references) filter usage
 

@@ -43,7 +43,19 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
+    <template name=".rarr" value="&amp;rarr;$END$" description="&amp;rarr; (→)" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
     <template name=".-&lt;" value="&amp;larr;$END$" description="&amp;larr; (←)" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name=".larr" value="&amp;larr;$END$" description="&amp;larr; (←)" toReformat="false"
               toShortenFQNames="true">
         <context>
             <option name="MARKDOWN" value="true"/>
@@ -154,14 +166,14 @@
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
-    <template name="l.lst" value="#lst:$REFERENCE$ $END$" description="pandoc-crossref listing anchor #lst:"
+    <template name="r.lst" value="[@lst:$REFERENCE$]$END$" description="pandoc-crossref reference listing [@lst:]"
               toReformat="false" toShortenFQNames="true">
         <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="MARKDOWN" value="true"/>
         </context>
     </template>
-    <template name="r.lst" value="[@lst:$REFERENCE$]$END$" description="pandoc-crossref reference listing [@lst:]"
+    <template name="l.lst" value="#lst:$REFERENCE$ $END$" description="pandoc-crossref listing anchor #lst:"
               toReformat="false" toShortenFQNames="true">
         <variable name="REFERENCE" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
