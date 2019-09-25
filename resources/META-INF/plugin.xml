@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.pandocker</id>
     <name>Live Templates for Pandoc's markdown</name>
-    <version>0.4.3-2-ge5cb6eb</version>
+    <version>0.5.1</version>
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[
@@ -21,7 +21,9 @@
 <li><code>.deg</code> → <code>&amp;deg; (°)</code></li>
 <li><code>.degc</code> → <code>&amp;deg;C (°C)</code></li>
 <li><code>.-&gt;</code> → <code>&amp;rarr; (→)</code></li>
+<li><code>.rarr</code> → <code>&amp;rarr; (→)</code></li>
 <li><code>.-&lt;</code> → <code>&amp;larr; (←)</code></li>
+<li><code>.larr</code> → <code>&amp;larr; (←)</code></li>
 </ul>
 <h3 id="shortcuts-for-pandoc-crossref-filter-usage">Shortcuts for <a href="https://lierdakil.github.io/pandoc-crossref/#references"><strong><em>pandoc-crossref</em></strong></a> filter usage</h3>
 <h4 id="subfigures">subfigures</h4>
@@ -86,32 +88,34 @@
 <ul>
 <li><a href="https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak" class="uri">https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak</a></li>
 </ul></li>
-<li><code>d.lscape</code> →
-<ul>
-<li><a href="https://github.com/pandocker/pandocker-lua-filters#landscape-pages" class="uri">https://github.com/pandocker/pandocker-lua-filters#landscape-pages</a> ```markdown ::: LANDSCAPE</li>
-</ul></li>
+<li><code>d.lscape</code> →</li>
 </ul>
-<p>::: ```</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" title="1">::: LANDSCAPE</a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3">:::</a></code></pre></div>
 <ul>
-<li><code>d.rmnote</code> →
-<ul>
-<li><a href="https://github.com/pandocker/pandocker-lua-filters#removable-note-block" class="uri">https://github.com/pandocker/pandocker-lua-filters#removable-note-block</a> ```markdown ::: rmnote</li>
-</ul></li>
+<li><p><a href="https://github.com/pandocker/pandocker-lua-filters#landscape-pages" class="uri">https://github.com/pandocker/pandocker-lua-filters#landscape-pages</a></p></li>
+<li><code>d.rmnote</code> →</li>
 </ul>
-<p>::: ```</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" title="1">::: rmnote</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3">::: </a></code></pre></div>
 <ul>
-<li><code>d.table</code> →
-<ul>
-<li><a href="https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table" class="uri">https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table</a> ```markdown ::: {.table }</li>
-</ul></li>
+<li><p><a href="https://github.com/pandocker/pandocker-lua-filters#removable-note-block" class="uri">https://github.com/pandocker/pandocker-lua-filters#removable-note-block</a></p></li>
+<li><code>d.table</code> →</li>
 </ul>
-<p>::: ```</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" title="1">::: {.table }</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3">:::</a></code></pre></div>
+<ul>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table" class="uri">https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table</a></li>
+</ul>
 ]]></description>
 
     <change-notes><![CDATA[
 <h3 id="version-0.5">Version 0.5</h3>
 <ul>
-<li>add <code>.pspan</code> shortcut</li>
+<li>add <code>.pspan</code>, <code>.larr</code>, <code>.rarr</code> shortcuts</li>
 </ul>
 <h3 id="version-0.4">Version 0.4</h3>
 <ul>
