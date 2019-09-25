@@ -66,25 +66,25 @@ Visit <https://lierdakil.github.io/pandoc-crossref/#references> for more details
   - <https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak>
 
 - `d.lscape` &rarr;
-  - <https://github.com/pandocker/pandocker-lua-filters#landscape-pages>
 ```markdown
 ::: LANDSCAPE
 
 :::
 ```
+  - <https://github.com/pandocker/pandocker-lua-filters#landscape-pages>
 
 - `d.rmnote` &rarr;
-  - <https://github.com/pandocker/pandocker-lua-filters#removable-note-block>
 ```markdown
 ::: rmnote
 
 ::: 
 ```
+  - <https://github.com/pandocker/pandocker-lua-filters#removable-note-block>
 
 - `d.table` &rarr;
-  - <https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table>
 ```markdown
 ::: {.table }
 
 :::
 ```
+  - <https://github.com/pandocker/pandocker-lua-filters#add-width-options-to-ordinary-table>

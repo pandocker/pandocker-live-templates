@@ -1,6 +1,6 @@
 ### Version 0.5
 
-- add `.pspan` shortcut
+- add `.pspan`, `.larr`, `.rarr` shortcuts
 
 ### Version 0.4
 
