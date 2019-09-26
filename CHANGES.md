@@ -1,3 +1,21 @@
+### Version 0.6
+#### General update
+
+- Template works without [Markdown Navigator](https://plugins.jetbrains.com/plugin/7896-markdown-navigator/)
+
+#### for `pandocker-lua-filters`
+
+- add `.remotediv`, `.landscapediv` and `.tablediv` shortcuts
+
+#### for `pandoc-crossref`
+
+- add `.figurediv` shortcut
+- add `.figureref` and `.figurelabel` shortcuts
+- add `.sectionref` and `.sectionlabel` shortcuts
+- add `.listingref` and `.listinglabel` shortcuts
+- add `.tableref` and `.tablelabel` shortcuts
+- add `.equationref` and `.equationlabel` shortcuts
+
 ### Version 0.5
 
 - add `.pspan`, `.larr`, `.rarr` shortcuts

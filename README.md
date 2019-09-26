@@ -31,26 +31,26 @@
 ```
 
 #### Labels
-- `l.eq` &rarr; `#eq:` 
+- `l.eq` or `.equationlabel` &rarr; `#eq:` 
   - <https://lierdakil.github.io/pandoc-crossref/#equation-labels>
-- `l.fig` &rarr; `#fig:`
+- `l.fig` or `.figurelabel` &rarr; `#fig:`
   - <https://lierdakil.github.io/pandoc-crossref/#image-labels>
-- `l.lst` &rarr; `#lst:`
+- `l.lst` or `listinglabel` &rarr; `#lst:`
   - <https://lierdakil.github.io/pandoc-crossref/#code-block-labels>
-- `l.sec` &rarr; `#sec:`
+- `l.sec` or `.sectionlabel` &rarr; `#sec:`
   - <https://lierdakil.github.io/pandoc-crossref/#section-labels>
-- `l.tbl` &rarr; `#tbl:`
+- `l.tbl` or `.tablelabel` &rarr; `#tbl:`
   - <https://lierdakil.github.io/pandoc-crossref/#table-labels>
 
 #### References
 
 Visit <https://lierdakil.github.io/pandoc-crossref/#references> for more details
 
-- `r.eq` &rarr; `[@eq:]`
-- `r.fig` &rarr; `[@fig:]`
-- `r.lst` &rarr; `[@lst:]`
-- `r.sec` &rarr; `[@sec:]`
-- `r.tbl` &rarr; `[@tbl:]`
+- `r.eq` or `.equationref` &rarr; `[@eq:]`
+- `r.fig` or `.figureref` &rarr; `[@fig:]`
+- `r.lst` or `.listingref` &rarr; `[@lst:]`
+- `r.sec` or `.sectionref` &rarr; `[@sec:]`
+- `r.tbl` or `.tableref` &rarr; `[@tbl:]`
 
 ### Shorcuts for [***pandocker-lua-filters***](https://github.com/pandocker/pandocker-lua-filters) filter usage
 
@@ -64,24 +64,21 @@ Visit <https://lierdakil.github.io/pandoc-crossref/#references> for more details
   - <https://github.com/pandocker/pandocker-lua-filters#wavedrom--bit-field>
 - `.toc` &rarr; `\toc`
   - <https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak>
-
-- `d.lscape` &rarr;
+- `d.lscape` or `.landscapediv` &rarr;
 ```markdown
 ::: LANDSCAPE
 
 :::
 ```
   - <https://github.com/pandocker/pandocker-lua-filters#landscape-pages>
-
-- `d.rmnote` &rarr;
+- `d.rmnote` or `.rmnotediv` &rarr;
 ```markdown
 ::: rmnote
 
 ::: 
 ```
   - <https://github.com/pandocker/pandocker-lua-filters#removable-note-block>
-
-- `d.table` &rarr;
+- `d.table` or `.tablediv` &rarr;
 ```markdown
 ::: {.table }
 
