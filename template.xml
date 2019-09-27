@@ -29,7 +29,7 @@ $endfor$
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplatesProvider id="PandockerLiveTemplateProvider"
                                       implementation="com.pandocker.templates.PandockerLiveTemplateProvider"/>
-                                      <liveTemplateContext implementation="MarkdownContext"/>
+                                      <liveTemplateContext implementation="com.pandocker.templates.MarkdownContext"/>
     </extensions>
 
     <actions>
