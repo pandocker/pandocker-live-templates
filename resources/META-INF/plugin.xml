@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.pandocker</id>
     <name>Live Templates for Pandoc's markdown</name>
-    <version>0.5.1</version>
+    <version>0.6.2</version>
     <vendor email="pandocker@github.com" url="https://github.com/pandocker">Pandocker</vendor>
 
     <description><![CDATA[
@@ -36,23 +36,23 @@
 <a class="sourceLine" id="cb2-3" title="3">:::</a></code></pre></div>
 <h4 id="labels">Labels</h4>
 <ul>
-<li><code>l.eq</code> → <code>#eq:</code>
+<li><code>l.eq</code> or <code>.equationlabel</code> → <code>#eq:</code>
 <ul>
 <li><a href="https://lierdakil.github.io/pandoc-crossref/#equation-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#equation-labels</a></li>
 </ul></li>
-<li><code>l.fig</code> → <code>#fig:</code>
+<li><code>l.fig</code> or <code>.figurelabel</code> → <code>#fig:</code>
 <ul>
 <li><a href="https://lierdakil.github.io/pandoc-crossref/#image-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#image-labels</a></li>
 </ul></li>
-<li><code>l.lst</code> → <code>#lst:</code>
+<li><code>l.lst</code> or <code>listinglabel</code> → <code>#lst:</code>
 <ul>
 <li><a href="https://lierdakil.github.io/pandoc-crossref/#code-block-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#code-block-labels</a></li>
 </ul></li>
-<li><code>l.sec</code> → <code>#sec:</code>
+<li><code>l.sec</code> or <code>.sectionlabel</code> → <code>#sec:</code>
 <ul>
 <li><a href="https://lierdakil.github.io/pandoc-crossref/#section-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#section-labels</a></li>
 </ul></li>
-<li><code>l.tbl</code> → <code>#tbl:</code>
+<li><code>l.tbl</code> or <code>.tablelabel</code> → <code>#tbl:</code>
 <ul>
 <li><a href="https://lierdakil.github.io/pandoc-crossref/#table-labels" class="uri">https://lierdakil.github.io/pandoc-crossref/#table-labels</a></li>
 </ul></li>
@@ -60,11 +60,11 @@
 <h4 id="references">References</h4>
 <p>Visit <a href="https://lierdakil.github.io/pandoc-crossref/#references" class="uri">https://lierdakil.github.io/pandoc-crossref/#references</a> for more details</p>
 <ul>
-<li><code>r.eq</code> → <code>[@eq:]</code></li>
-<li><code>r.fig</code> → <code>[@fig:]</code></li>
-<li><code>r.lst</code> → <code>[@lst:]</code></li>
-<li><code>r.sec</code> → <code>[@sec:]</code></li>
-<li><code>r.tbl</code> → <code>[@tbl:]</code></li>
+<li><code>r.eq</code> or <code>.equationref</code> → <code>[@eq:]</code></li>
+<li><code>r.fig</code> or <code>.figureref</code> → <code>[@fig:]</code></li>
+<li><code>r.lst</code> or <code>.listingref</code> → <code>[@lst:]</code></li>
+<li><code>r.sec</code> or <code>.sectionref</code> → <code>[@sec:]</code></li>
+<li><code>r.tbl</code> or <code>.tableref</code> → <code>[@tbl:]</code></li>
 </ul>
 <h3 id="shorcuts-for-pandocker-lua-filters-filter-usage">Shorcuts for <a href="https://github.com/pandocker/pandocker-lua-filters"><strong><em>pandocker-lua-filters</em></strong></a> filter usage</h3>
 <ul>
@@ -88,21 +88,21 @@
 <ul>
 <li><a href="https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak" class="uri">https://github.com/pandocker/pandocker-lua-filters#toc--pagebreak</a></li>
 </ul></li>
-<li><code>d.lscape</code> →</li>
+<li><code>d.lscape</code> or <code>.landscapediv</code> →</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" title="1">::: LANDSCAPE</a>
 <a class="sourceLine" id="cb3-2" title="2"></a>
 <a class="sourceLine" id="cb3-3" title="3">:::</a></code></pre></div>
 <ul>
-<li><p><a href="https://github.com/pandocker/pandocker-lua-filters#landscape-pages" class="uri">https://github.com/pandocker/pandocker-lua-filters#landscape-pages</a></p></li>
-<li><code>d.rmnote</code> →</li>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#landscape-pages" class="uri">https://github.com/pandocker/pandocker-lua-filters#landscape-pages</a></li>
+<li><code>d.rmnote</code> or <code>.rmnotediv</code> →</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" title="1">::: rmnote</a>
 <a class="sourceLine" id="cb4-2" title="2"></a>
 <a class="sourceLine" id="cb4-3" title="3">::: </a></code></pre></div>
 <ul>
-<li><p><a href="https://github.com/pandocker/pandocker-lua-filters#removable-note-block" class="uri">https://github.com/pandocker/pandocker-lua-filters#removable-note-block</a></p></li>
-<li><code>d.table</code> →</li>
+<li><a href="https://github.com/pandocker/pandocker-lua-filters#removable-note-block" class="uri">https://github.com/pandocker/pandocker-lua-filters#removable-note-block</a></li>
+<li><code>d.table</code> or <code>.tablediv</code> →</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" title="1">::: {.table }</a>
 <a class="sourceLine" id="cb5-2" title="2"></a>
@@ -113,6 +113,24 @@
 ]]></description>
 
     <change-notes><![CDATA[
+<h3 id="version-0.6">Version 0.6</h3>
+<h4 id="general-update">General update</h4>
+<ul>
+<li>Template works without <a href="https://plugins.jetbrains.com/plugin/7896-markdown-navigator/">Markdown Navigator</a></li>
+</ul>
+<h4 id="for-pandocker-lua-filters">for <code>pandocker-lua-filters</code></h4>
+<ul>
+<li>add <code>.remotediv</code>, <code>.landscapediv</code> and <code>.tablediv</code> shortcuts</li>
+</ul>
+<h4 id="for-pandoc-crossref">for <code>pandoc-crossref</code></h4>
+<ul>
+<li>add <code>.figurediv</code> shortcut</li>
+<li>add <code>.figureref</code> and <code>.figurelabel</code> shortcuts</li>
+<li>add <code>.sectionref</code> and <code>.sectionlabel</code> shortcuts</li>
+<li>add <code>.listingref</code> and <code>.listinglabel</code> shortcuts</li>
+<li>add <code>.tableref</code> and <code>.tablelabel</code> shortcuts</li>
+<li>add <code>.equationref</code> and <code>.equationlabel</code> shortcuts</li>
+</ul>
 <h3 id="version-0.5">Version 0.5</h3>
 <ul>
 <li>add <code>.pspan</code>, <code>.larr</code>, <code>.rarr</code> shortcuts</li>
@@ -137,7 +155,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173.0"/>
+    <idea-version since-build="173.0" until-build="193.*"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
