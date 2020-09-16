@@ -1,4 +1,8 @@
 package com.pandocker.templates;
+
+import com.intellij.codeInsight.template.TemplateActionContext;
+import com.intellij.codeInsight.template.TemplateContextType;
+import org.jetbrains.annotations.NotNull;
 // as-is copy from
 // https://www.jetbrains.org/intellij/sdk/docs/tutorials/live_templates/template_support.html#implement-templatecontexttype
 
