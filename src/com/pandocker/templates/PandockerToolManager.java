@@ -10,8 +10,8 @@ import com.intellij.tools.ToolsProcessor;
 
 public class PandockerToolManager extends BaseToolManager<Tool> {
     PandockerToolManager() {
-        super(ActionManagerEx.getInstanceEx(), SchemeManagerFactory.getInstance(),
-                "/tools/pandocker", "PandockerPlugin");
+        super(SchemeManagerFactory.getInstance(),
+                "tools/pandocker", "PandockerPlugin");
     }
 
     protected SchemeProcessor<ToolsGroup<Tool>, ToolsGroup<Tool>> createProcessor() {

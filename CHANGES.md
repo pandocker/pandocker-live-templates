@@ -1,3 +1,8 @@
+### Version 0.7 (BETA)
+
+- Compatible with 202.*
+- Not sure < 193.*
+
 ### Version 0.6
 #### General update
 
